@@ -25,4 +25,4 @@ urlpatterns = [
     path('', include('academy_app.urls')),
     path('dashboard/', include('user_dashboard.urls')),
 
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) # serviing static files during development
