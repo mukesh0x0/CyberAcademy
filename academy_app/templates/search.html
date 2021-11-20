@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block title %}courses{% endblock title %}
+
+{% block body %}
+   <main>
+        <div class="course-container">
+			<h4>showing results for "{{query}}"</h4>
+			{% if pages.count == 0 %}
+				<div class="no-data-found">
+					<p><i class="fas fa-exclamation-circle"></i> No result found</p>
+				</div>
+			{% endif %}
+            {% for result in result %}
+				<div class="course-card">
+					<a href="/course/detail/{{result.id}}">
+						<div class="course-thumbnail">
+							<img src="media/{{result.thumbnail}}" alt="" width="100%" height="100%">
+						</div>
+						<div class="detail">
+							<h2>course title</h2>
+							<div class="level{{result.level}}">{{result.get_level_display}}</div>
+							<p>
+								<h4>Estimated time</h4>
+								<div>Duration: {{result.duration}}</div>
+							</p>
+						</div>
+					</a>
+				</div>
+			{% endfor %}
+
+			<!-- load button -->
+			<div class="load-more">
+				{% if result.has_other_pages %}
+					{% if result.has_previous %}
+						<a href="?q={{query}}&&page={{result.previous_page_number}}">PREV</a>
+					{% endif %}
+					{% if result.has_next %}
+						<a href="?q={{query}}&&page={{result.next_page_number}}">NEXT</a>
+					{% endif %}
+				{% endif %}
+			</div>
+        </div>
+
+	</main>
+{% endblock body %}

@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}payment{% endblock title %}
+
+{% block body %}
+    <main>
+        {% load static %}
+        <form action="/payment/course/{{course.id}}/{{enroll.id}}/{{user.id}}" method='POST'>
+            {% csrf_token %}
+            <div class="atm-card">
+                <h3>
+                    <input type="text" name="bank" placeholder="Bank Name" required>
+                </h3>
+                <div class="atm-chip">
+                    <img src="{% static 'images/atm-chip.png' %}" alt="atm" height="60px">
+                </div>
+                <div class="card-number">
+                    <span>
+                        &#183;&#183;&#183;&#183; &nbsp;
+                        &#183;&#183;&#183;&#183; &nbsp;
+                        &#183;&#183;&#183;&#183; &nbsp;
+                    </span>
+                    <input type="text" name="card-number" maxlength="4" placeholder="_ _ _ _" required>
+                </div>
+                <div class="valid-thru">
+                    <p>Expire on : </p>
+                    <input type="date" name="expiry-date" required>
+                </div>
+                <h3>
+                    <input type="text" name="name" placeholder="Card Holder Name" required>
+                </h3>
+                <div></div>
+            </div>
+            <button>make payment</button>
+        </form>
+	</main>
+{% endblock body %}
