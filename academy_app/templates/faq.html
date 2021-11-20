@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}course detail{% endblock title %}
+
+{% block body %}
+   <main>
+        <br>
+        <!-- FAQs -->
+        <div class="course-curriculum" id="sulabuss">
+			<h3>Frequently asked questions</h3>
+            <details>
+                <summary>question One</summary>
+                <p>{% lorem 1 b random %}<p>
+            </details>
+            <details>
+                <summary>question two</summary>
+                <p>{% lorem 1 b random %}<p>
+            </details>
+            <details>
+                <summary>question three</summary>
+                <p>{% lorem 1 b random %}<p>
+            </details>
+            <details>
+                <summary>question fout</summary>
+                <p>{% lorem 1 b random %}<p>
+            </details>
+            <details>
+                <summary>question five</summary>
+                <p>{% lorem 1 b random %}<p>
+            </details>
+
+        </div>
+	</main>
+{% endblock body %}

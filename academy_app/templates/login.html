@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}login{% endblock title %}
+
+{% block body %}
+    <br>
+   <!-- login -->
+    <div class="login">
+        <div>
+            <div class="login-overlay"></div>
+            <div class="login-content">
+                <h3>Welcome Back!</h3>
+                <p>Sign in to continue to CyberAcademy</p>
+                <a href="/">
+                    <img src="images/tmp-logo.png" alt="logo">
+                </a>
+            </div>
+        </div>
+        <form action='/login' method="POST">
+            {% csrf_token %}
+            <input type="email" name="email" placeholder="E-Mail" required><br>
+            <input type="password" name="password" placeholder="password" required><br>
+
+            <input type="checkbox"><span>Remember me</span><br>
+            <button><b>Log In</b></button><br>
+        </form>
+        <a href="#"><i class="fa fa-lock"></i> Forgot your password?</a>
+    </div>
+    <div>
+        <span>Don't have an account? <a href="/signup">Register now</a></span>
+        <br><br><br><br>
+    </div>
+{% endblock body %}
