@@ -63,14 +63,9 @@ https://cyberacademy.pythonanywhere.com/
 **Server-side:** Python/Django
 
 
-## Support
-
-For support, email fake@fake.com or join our Slack channel.
-
-
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](https://raw.githubusercontent.com/mukesh0x0/CyberAcademy/main/screenshots/cyber-academy-homepage.png)
 
 
 ## Feedback
