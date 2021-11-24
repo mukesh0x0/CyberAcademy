@@ -1,8 +1,8 @@
 # CyberAcademy
 
-CyberAcademy is an on online learning platform develped using Python/Django.
+CyberAcademy is an on online learning platform developed using Python/Django.
 
-And HTML/CSS/JavaScript is used for front-end designing. 
+And for front-end designing HTML/CSS/JavaScript is used. 
 
 
 ## Live Demo
